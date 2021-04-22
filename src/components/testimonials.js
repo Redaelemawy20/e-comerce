@@ -4,8 +4,7 @@ import { testimonials } from "../utils/testimonials";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { useEffect } from "react/cjs/react.development";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const FeaturedProducts = () => {
