@@ -5,21 +5,21 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useProductsContext } from "../context/products_context";
 import { useCartContext } from "../context/cart_context";
-
+import { useUserContext } from "../context/user_context";
 const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
   const { total_items, clearCart } = useCartContext();
-  const myUser = null;
+  const { user, logout } = useUserContext();
   return (
-    <Wrapper className="cart-btn-wrapper">
-      {myUser ? (
-        <button type="button" className="btn auth-btn">
+    <Wrapper>
+      {user ? (
+        <button onClick={logout} type="button" className="btn auth-btn">
           Logout
         </button>
       ) : (
-        <button type="button" className="btn auth-btn">
+        <a href="/auth/google" className="btn auth-btn">
           Login
-        </button>
+        </a>
       )}
       <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         <span className="cart-container">

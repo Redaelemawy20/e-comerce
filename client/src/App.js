@@ -1,10 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { Navbar, Sidebar, Footer } from "./components";
+import { useUserContext } from "./context/user_context";
 
 import { Home, SingleProduct, Cart, Checkout, Error, Products } from "./pages";
 
 function App() {
+  const { user } = useUserContext();
+
   return (
     <Router>
       <Navbar />
@@ -21,7 +29,12 @@ function App() {
           <Products />
         </Route>
         <Route exact path="/products/:id" children={<SingleProduct />} />
-
+        <Route
+          path="/checkout"
+          render={(props) =>
+            user ? <Checkout {...props} /> : <Redirect to="/" />
+          }
+        />
         <Route path="*">
           <Error />
         </Route>
