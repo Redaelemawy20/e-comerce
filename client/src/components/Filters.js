@@ -19,7 +19,7 @@ const Filters = ({ className }) => {
       shipping,
     },
     updateFilters,
-    clearFilters,
+
     all_products,
     toggleFiltersControls,
   } = useFilterContext();
@@ -39,19 +39,6 @@ const Filters = ({ className }) => {
           <FaTimes />
         </button>
         <form onSubmit={(e) => e.preventDefault()}>
-          {/* search input */}
-          {/* <div className="form-control">
-            <input
-              type="text"
-              name="text"
-              placeholder="search"
-              className="search-input"
-              value={text}
-              onChange={updateFilters}
-            />
-          </div> */}
-          {/* end search input */}
-          {/* categories */}
           <div className="form-control">
             <h5>category</h5>
             <div className="category">
@@ -168,16 +155,6 @@ const Wrapper = styled.section`
       margin-bottom: 0.5rem;
     }
   }
-  .search-input {
-    padding: 0.5rem;
-    background: var(--clr-grey-10);
-    border-radius: var(--radius);
-    border-color: transparent;
-    letter-spacing: var(--spacing);
-  }
-  .search-input::placeholder {
-    text-transform: capitalize;
-  }
 
   button {
     display: block;
@@ -188,7 +165,7 @@ const Wrapper = styled.section`
     border: none;
     border-bottom: 1px solid transparent;
     letter-spacing: var(--spacing);
-    color: var(--clr-primary-1);
+
     cursor: pointer;
   }
   .active {

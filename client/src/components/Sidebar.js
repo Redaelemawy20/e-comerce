@@ -39,8 +39,11 @@ const Sidebar = () => {
               </Link>
             </li>
           )}
+          <li>
+            {" "}
+            <CartButtons />
+          </li>
         </ul>
-        <CartButtons />
       </aside>
     </SidebarContainer>
   );
@@ -50,8 +53,8 @@ const SidebarContainer = styled.div`
   text-align: center;
 
   .sidebar-header {
-    background-color: #3a5683;
     display: flex;
+    background-color: red;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -90,7 +93,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--clr-white);
+    background: whitesmoke;
     transition: var(--transition);
     transform: translate(-100%);
     z-index: -1;

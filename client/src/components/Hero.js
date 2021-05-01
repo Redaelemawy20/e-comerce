@@ -17,7 +17,7 @@ const Hero = () => {
           quasi odit tenetur unde officiis repudiandae quod deserunt quia eum...
         </p>
 
-        <Link to="/products" className="btn hero-btn">
+        <Link to="/products" className="btn hero-btn btn--secondary">
           shop now
         </Link>
       </article>
@@ -34,8 +34,8 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-bottom: 0.5rem;
-  /* place-items: center; */
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0 0 20px 10px #f3f3f3;
   .content {
     margin-top: 40px;
   }
@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    padding-top: 4rem;
+    padding: 4rem;
     height: calc(100vh - 5rem);
 
     /* grid-template-columns: 1fr 1fr; */
@@ -64,33 +64,6 @@ const Wrapper = styled.section`
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
     }
-
-    /* .main-img {
-      width: 100%;
-      height: 550px;
-      position: relative;
-      border-radius: var(--radius);
-      display: block;
-      object-fit: cover;
-    }
-    .accent-img {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 250px;
-      transform: translateX(-50%);
-      border-radius: var(--radius);
-    } */
-    /* .img-container::before {
-      content: "";
-      position: absolute;
-      width: 10%;
-      height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
-      left: -8%;
-      border-radius: var(--radius);
-    } */
   }
 `;
 

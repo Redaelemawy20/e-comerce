@@ -16,14 +16,10 @@ const CartContent = () => {
       })}
       <hr />
       <div className="link-container">
-        <Link to="/products" className="link-btn">
+        <Link to="/products" className=" btn link-btn btn--secondary">
           continue shopping
         </Link>
-        <button
-          type="button"
-          className="link-btn clear-btn"
-          onClick={clearCart}
-        >
+        <button type="button" className="btn btn--accent" onClick={clearCart}>
           clear shopping cart
         </button>
       </div>
@@ -39,12 +35,10 @@ const Wrapper = styled.section`
     margin-top: 2rem;
   }
   .link-btn {
-    background: transparent;
     border-color: transparent;
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
-    background: var(--clr-grey-2);
-    color: var(--clr-white);
+
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
     font-weight: 400;

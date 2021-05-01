@@ -26,7 +26,6 @@ const FeaturedProducts = () => {
     <Wrapper className="section">
       <div className="title">
         <h2>What our Customers are Saying</h2>
-        <div className="underline"></div>
       </div>
       <div className="section-center featured">
         <div className="testimonial-container">
@@ -48,22 +47,21 @@ const FeaturedProducts = () => {
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-grey-10);
-
-  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  padding: 10px;
   h2 {
     color: var(--clr-grey-1);
   }
   .featured {
     margin: 2rem auto;
+    background: var(--clr-grey-10);
+
+    /* height: 80vh; */
+    overflow: hidden;
+    margin: 0;
+    padding: 10px;
   }
   .btn {
     display: block;
@@ -72,13 +70,14 @@ const Wrapper = styled.section`
     text-align: center;
   }
   .testimonial-container {
-    background-color: #476ce4;
-    color: white;
-    border-radius: 15px;
+    background: var(--color-primary);
+    color: #fff;
     margin: 0px auto;
     padding: 50px 80px;
     max-width: 768px;
     position: relative;
+    padding: 4rem;
+    border-radius: 5px;
   }
   p {
     color: white;
@@ -100,10 +99,9 @@ const Wrapper = styled.section`
 
   .testimonial {
     padding: 0.5rem 0;
-    line-height: 28px;
+    margin-top: 20px;
+    line-height: 1.7;
     text-align: justify;
-
-    font-size: 1rem;
   }
 
   .user {

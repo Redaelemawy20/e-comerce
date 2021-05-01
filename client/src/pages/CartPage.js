@@ -28,8 +28,6 @@ const CartPage = () => {
 };
 
 const Wrapper = styled.main`
-  background-color: #639a88;
-  color: black;
   .empty {
     text-align: center;
     h2 {

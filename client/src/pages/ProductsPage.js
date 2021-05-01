@@ -26,7 +26,7 @@ const ProductsPage = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: #c2cad0;
+  /* background-color: #c2cad0; */
 
   .products {
     display: grid;
@@ -35,11 +35,11 @@ const Wrapper = styled.div`
     /* margin: 1rem auto; */
   }
   .filters {
-    background-color: #639a88;
+    background-color: #05cdf0;
     border-radius: 15px;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 20px 10px #f3f3f3;
     overflow: hidden;
-    color: var(--clr-primary-1);
+    color: white;
     transition: width 1s;
 
     z-index: 2;
@@ -70,7 +70,7 @@ const Wrapper = styled.div`
       grid-column: 1/2;
       grid-row: 1;
       z-index: 1;
-      height: 30rem;
+      height: 35rem;
       left: 3rem;
     }
     .visible {

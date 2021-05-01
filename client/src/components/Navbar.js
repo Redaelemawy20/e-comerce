@@ -9,7 +9,7 @@ import { useProductsContext } from "../context/products_context";
 import { useUserContext } from "../context/user_context";
 const Nav = () => {
   const { openSidebar } = useProductsContext();
-  const { user, logout, login } = useUserContext();
+  const { user } = useUserContext();
   return (
     <NavContainer>
       <div className="nav-center">
@@ -36,8 +36,8 @@ const Nav = () => {
             </li>
           )}
         </ul>
-        <CartButtons />
       </div>
+      <CartButtons />
     </NavContainer>
   );
 };
@@ -47,10 +47,9 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* border-bottom: 1px solid gray; */
+  flex-wrap: nowrap;
   margin-bottom: 1rem;
-  /* background-color: #2708a0; */
-  /* box-shadow: 0 0 1px 1px gray; */
+
   .home {
     font-size: 1.25rem;
   }
@@ -103,13 +102,12 @@ const NavContainer = styled.nav`
         margin: 0 0.5rem;
       }
       a {
-        color: #bab6b5;
         font-size: 1rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 2px solid var(--clr-primary-7);
+          border-bottom: 2px solid var(--color-body-darker);
         }
       }
     }

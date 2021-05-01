@@ -23,7 +23,7 @@ const CheckoutPage = () => {
           <div>
             <StripeCheckout
               name="Happy Home"
-              description="$5 for 5 email credits"
+              description={`total amount is ${total_amount * 100} $`}
               amount={total_amount * 100}
               token={(token) => handleToken(token, total_amount)}
               stripeKey={process.env.REACT_APP_STRIPE_KEY}
@@ -37,6 +37,7 @@ const CheckoutPage = () => {
   );
 };
 const Wrapper = styled.div`
+  height: 74vh;
   display: flex;
   align-items: center;
   justify-content: center;

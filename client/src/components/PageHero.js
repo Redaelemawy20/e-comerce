@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
 import { useFilterContext } from "../context/filter_context";
-import { AiFillInfoCircle, AiFillFilter } from "react-icons/ai";
+import { AiFillFilter } from "react-icons/ai";
 
 const PageHero = () => {
   const {
@@ -26,7 +26,11 @@ const PageHero = () => {
           onChange={updateFilters}
           placeholder="What are you looking for?"
         />{" "}
-        <button type="button" className="clear-btn" onClick={clearFilters}>
+        <button
+          type="button"
+          className="clear-btn btn--accent"
+          onClick={clearFilters}
+        >
           {" "}
           clear filters
         </button>{" "}
@@ -41,10 +45,13 @@ const Wrapper = styled.section`
   margin: auto;
 
   .section-center {
-    height: 100%;
+    border-radius: 20px;
+    height: 80%;
     display: flex;
     width: 90%;
     align-items: center;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    padding: 0 0.5rem;
   }
   .search {
     margin-left: 10px;
@@ -61,8 +68,6 @@ const Wrapper = styled.section`
     box-shadow: 0 0 0 4px rgb(24, 117, 255, 0.25);
   }
   .clear-btn {
-    background: var(--clr-red-dark);
-    color: var(--clr-white);
     padding: 0.6rem 1rem;
     border-radius: var(--radius);
     margin-left: 10px;

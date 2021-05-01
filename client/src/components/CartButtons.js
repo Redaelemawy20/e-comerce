@@ -13,11 +13,15 @@ const CartButtons = () => {
   return (
     <Wrapper>
       {user ? (
-        <button onClick={logout} type="button" className="btn auth-btn">
+        <button
+          onClick={logout}
+          type="button"
+          className="btn auth-btn btn--accent"
+        >
           Logout
         </button>
       ) : (
-        <a href="/auth/google" className="btn auth-btn">
+        <a href="/auth/google" className="btn auth-btn btn--primary">
           Login
         </a>
       )}
@@ -47,7 +51,6 @@ const Wrapper = styled.div`
     align-items: center;
   }
   .cart-container {
-    display: flex;
     align-items: center;
     position: relative;
     svg {
@@ -57,8 +60,8 @@ const Wrapper = styled.div`
   }
   .cart-value {
     position: absolute;
-    top: -11px;
-    right: -16px;
+    top: -17px;
+    right: -20px;
     background: gold;
     width: 10px;
     height: 10px;
@@ -70,16 +73,21 @@ const Wrapper = styled.div`
     color: var(--clr-white);
     padding: 12px;
   }
+  @media screen and (min-width: 800px) {
+    .cart-value {
+      top: -11px;
+      right: -17px;
+    }
+  }
   .auth-btn {
     margin-left: auto;
     margin-right: 1.4rem;
     display: flex;
     align-items: center;
-    background: #c2cad0;
-    border-color: transparent;
+
     font-size: 1rem;
     cursor: pointer;
-    color: var(--clr-grey-1);
+
     letter-spacing: var(--spacing);
     svg {
       margin-left: 5px;
