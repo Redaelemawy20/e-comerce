@@ -1,0 +1,16 @@
+section.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  //   background-color: red;
+  // margin-top: 2rem;
+  .title {
+    text-align: center;
+  }
+  h2 {
+    // margin: auto 2rem;
+    color: var(--clr-grey-1);
+  }
+}

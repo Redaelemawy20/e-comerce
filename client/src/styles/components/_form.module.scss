@@ -1,0 +1,135 @@
+.form {
+  height: 20vh;
+  width: 70%;
+  margin: auto;
+
+  .section-center {
+    border-radius: 6px;
+    height: 80%;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    padding: 0 0.5rem;
+  }
+  .search {
+    margin-left: 10px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    transition: border-color 150ms, box-shadow 150ms;
+    outline: 0;
+    flex: 2;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  .search:focus {
+    border-color: #7db0fb;
+    box-shadow: 0 0 0 4px rgba(178, 184, 194, 0.25);
+  }
+  .clear-btn {
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    margin-left: 10px;
+  }
+  h4 {
+    display: inline-block;
+  }
+  @media (min-width: 768px) {
+  }
+}
+
+// filters
+
+form.filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .form-control {
+    margin-top: 1.25rem;
+    h5 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 0.25em 0;
+    padding: 0.25rem 0;
+    text-transform: capitalize;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    letter-spacing: var(--spacing);
+
+    cursor: pointer;
+  }
+  .active {
+    border-color: var(--clr-grey-5);
+  }
+  .company {
+    background: var(--clr-grey-10);
+    border-radius: var(--radius);
+    border-color: transparent;
+    padding: 0.25rem;
+  }
+  .colors {
+    display: flex;
+    justify-content: center;
+  }
+  .color-btn {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #222;
+    margin-right: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      font-size: 0.5rem;
+      color: var(--clr-white);
+    }
+  }
+  .all-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    opacity: 0.5;
+  }
+  .active {
+    opacity: 1;
+  }
+  .all-btn .active {
+    text-decoration: underline;
+  }
+  .price {
+    margin-bottom: 0.25rem;
+  }
+  .category {
+    margin-top: 15px;
+    display: flex;
+    color: red;
+    flex-direction: column;
+  }
+  .shipping {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-transform: capitalize;
+    column-gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      position: sticky;
+      top: 1rem;
+    }
+  }
+}

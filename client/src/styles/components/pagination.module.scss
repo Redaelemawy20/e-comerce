@@ -1,0 +1,17 @@
+.pagination {
+  margin-top: 1.5rem;
+  .list {
+    display: block;
+    width: 10rem;
+    margin: auto;
+  }
+  .list-item {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    border: 1px solid gray;
+  }
+  .active {
+    background-color: blueviolet;
+  }
+}
