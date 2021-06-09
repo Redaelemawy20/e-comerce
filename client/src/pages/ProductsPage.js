@@ -35,9 +35,9 @@ const Wrapper = styled.div`
     /* margin: 1rem auto; */
   }
   .filters {
-    background-color: #05cdf0;
+    background-color: gray;
     border-radius: 15px;
-    box-shadow: 0 0 20px 10px #f3f3f3;
+    /* box-shadow: 0 0 20px 10px #f3f3f3; */
     overflow: hidden;
     color: white;
     transition: width 1s;

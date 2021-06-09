@@ -17,13 +17,6 @@ const Nav = () => {
           <Link to="/">
             <img src={logo} alt="happy home" />
           </Link>
-          <button
-            type="button"
-            className={navStyle["nav-toggle"]}
-            onClick={openSidebar}
-          >
-            <FaBars />
-          </button>
         </div>
         <ul className={navStyle["nav-links"]}>
           {links.map((link) => {
@@ -41,7 +34,18 @@ const Nav = () => {
           )}
         </ul>
       </div>
-      <CartButtons />
+      <div className={navStyle["nav-toggle"]}>
+        <button
+          type="button"
+          className={navStyle["nav-toggle-icon"]}
+          onClick={openSidebar}
+        >
+          <FaBars />
+        </button>
+      </div>
+      <div className={navStyle["nav-cart"]}>
+        <CartButtons />
+      </div>
     </nav>
   );
 };

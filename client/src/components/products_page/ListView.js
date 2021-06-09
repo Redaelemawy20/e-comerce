@@ -16,7 +16,10 @@ const ListView = ({ products }) => {
               <p className={listStyle.desc}>
                 {description.substring(0, 150)}...
               </p>
-              <Link to={`/products/${id}`} className={listStyle.btn}>
+              <Link
+                to={`/products/${id}`}
+                className={` btn btn--primary ${listStyle["btn-details"]} `}
+              >
                 Details
               </Link>
             </div>

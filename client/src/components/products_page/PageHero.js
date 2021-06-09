@@ -12,8 +12,8 @@ const PageHero = () => {
   } = useFilterContext();
 
   return (
-    <section className={formStyle.form}>
-      <div className={formStyle["section-center"]}>
+    <section className={formStyle["section-center"]}>
+      <form className={formStyle.form}>
         <h4>
           <AiFillFilter onClick={toggleFiltersControls} />
         </h4>
@@ -33,7 +33,7 @@ const PageHero = () => {
           {" "}
           clear filters
         </button>{" "}
-      </div>
+      </form>
     </section>
   );
 };
